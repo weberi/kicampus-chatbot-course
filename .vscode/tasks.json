@@ -30,9 +30,9 @@
         {
             "label": "rasa-terminal",
             "type": "shell",
-            "command": [ "source .env/bin/activate; spacy download en_core_web_md;"  ],  
+            "command": [ "source env/bin/activate; spacy download en_core_web_md;"  ],  
             "windows": {
-                "command": ".env/Scripts/activate.bat; spacy download en_core_web_md;"
+                "command": "env/Scripts/activate.bat; spacy download en_core_web_md;"
                 },
             "group": "build",
             "presentation": {
