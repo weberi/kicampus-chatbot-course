@@ -30,9 +30,9 @@
         {
             "label": "rasa-terminal",
             "type": "shell",
-            "command": [ "source .venv/bin/activate; spacy download en_core_web_md;"  ],  
+            "command": [ "if [ -n \"$VIRTUAL_ENV\" ]; then deactivate; fi; source .env/bin/activate; spacy download en_core_web_md;"  ],  
             "windows": {
-                "command": ".venv/Scripts/activate.bat; spacy download en_core_web_md;"
+                "command": "if ($env:VIRTUAL_ENV) { deactivate }; .env\\Scripts\\activate.bat; spacy download en_core_web_md;"
                 },
             "group": "build",
             "presentation": {
